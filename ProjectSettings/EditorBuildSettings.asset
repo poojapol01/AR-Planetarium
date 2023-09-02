@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Earth.unity
+    guid: c6152e44119586748927cc848eb5b1df
+  - enabled: 1
+    path: Assets/Scenes/Mars.unity
+    guid: 392957388e589e145be8e01c9004914e
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: ffd3e14e7009e5b48a20e6a0a7d9bf2b, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 41caa0cec258bc7489195a3911066790, type: 2}
