@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HomeScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Planets.unity
+    guid: c8f48a062001039469c6be052f0f1be8
+  - enabled: 1
     path: Assets/Scenes/Earth.unity
     guid: c6152e44119586748927cc848eb5b1df
   - enabled: 1
