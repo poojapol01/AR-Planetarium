@@ -6,35 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class PlanetObjectController : MonoBehaviour
 {
-    //public GameObject[] planetOjects;
-    public GameObject PlanetObject;
     private Vector3 planetPosition = new Vector3(0f, 0f, 4f);
-    //private Vector3 planetRotation = new Quaternion(0f, 0f, 0f);
-    public void GetButtonName()
+    GameObject planet;
+    public void Start()
     {
-        SceneManager.LoadScene("Planets");
-        string clickedButtonName = EventSystem.current.currentSelectedGameObject.name;
-        Debug.Log("Button which is clicked: " +clickedButtonName);
-
-
-        switch (clickedButtonName)
+        string selectedPlanet = PlayerPrefs.GetString("SelectedPlanet");
+        Debug.Log("Button which is clicked: " + selectedPlanet);
+        
+        switch (selectedPlanet)
         {
             case "Earth":
                 {
-                    Debug.Log("Button clicked: " + clickedButtonName);
-                    Instantiate(PlanetObject);
+                    Debug.Log("Button clicked: " + selectedPlanet);
+                    planet = Instantiate(Resources.Load("Earth", typeof(GameObject)), planetPosition, Quaternion.identity) as GameObject;
+                    planet.name = "Earth";
                     break;
                 }
             case "Mars":
                 {
-                    Debug.Log("Button clicked: " + clickedButtonName);
-                    Instantiate(PlanetObject, planetPosition, Quaternion.identity);
+                    Debug.Log("Button clicked: " + selectedPlanet);
+                    planet = Instantiate(Resources.Load("Mars", typeof(GameObject)), planetPosition, Quaternion.identity) as GameObject;
                     break;
                 }
             case "Saturn":
                 {
-                    Debug.Log("Button clicked: " + clickedButtonName);
-                    Instantiate(PlanetObject, planetPosition, Quaternion.identity);
+                    Debug.Log("Button clicked: " + selectedPlanet);
+                    planet = Instantiate(Resources.Load("Saturn", typeof(GameObject)), planetPosition, Quaternion.identity) as GameObject;
                     break;
                 }
         }
